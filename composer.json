@@ -4,7 +4,7 @@
 	"description": "Google Docs content node type for the Neos CMS",
 	"license": "MIT License",
 	"require": {
-		"neos/neos": "*",
+		"neos/neos": "^3.0"
 	},
 	"autoload": {
 		"psr-4": {

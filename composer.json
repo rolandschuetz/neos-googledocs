@@ -2,7 +2,7 @@
 	"name": "codeq/googledocs",
 	"type": "neos-package",
 	"description": "Google Docs content node type for the Neos CMS",
-	"license": "GPL-3.0+",
+	"license": "MIT License",
 	"require": {
 		"neos/neos": "*",
 	},

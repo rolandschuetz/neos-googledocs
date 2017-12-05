@@ -1,0 +1,11 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+<div class="codeq-manualpage-text">
+	<f:security.ifHasRole role="Administrator">
+		<f:then>
+			{neos:contentElement.editable(property: 'text')}
+		</f:then>
+		<f:else>
+			{text -> f:format.raw()}
+		</f:else>
+	</f:security.ifHasRole>
+</div>

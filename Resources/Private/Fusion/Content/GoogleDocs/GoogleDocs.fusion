@@ -1,0 +1,3 @@
+prototype(CodeQ.GoogleDocs:GoogleDocs) {
+	templatePath = 'resource://CodeQ.GoogleDocs/Private/Fusion/Content/GoogleDocs/GoogleDocs.html'
+}

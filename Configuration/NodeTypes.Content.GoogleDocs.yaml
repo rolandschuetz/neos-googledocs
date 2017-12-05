@@ -1,0 +1,8 @@
+'CodeQ.GoogleDocs:GoogleDocs':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: Google Docs
+    group: general
+    icon: icon-file-text
+  properties:

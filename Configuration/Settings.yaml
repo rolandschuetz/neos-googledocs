@@ -3,3 +3,30 @@ Neos:
     fusion:
       autoInclude:
         CodeQ.GoogleDocs: true
+    modules:
+      'administration':
+        submodules:
+          'googleDocs':
+            label: 'Google Drive Authentication'
+            controller: 'CodeQ\GoogleDocs\Controller\AuthenticationController'
+            icon: 'icon-google'
+            description: 'Authenticate the Google Drive Application'
+CodeQ:
+  GoogleDocs:
+    authentication:
+
+      # Google OAuth 2.0 client secret file
+      # Place this json file in safe location and provide respective path here.
+      # Path should be respective to the DOCUMENT_ROOT\Web folder
+      clientSecretFilePath: ~
+
+      # This file will be generate automatically for storing the access token temperory
+      # Please provide safe location with file name
+      # Path should be respective to the DOCUMENT_ROOT\Web folder
+      accessTokenFilePath: ~
+
+      # Google OAuth 2.0 App name
+      appName : ~
+
+      # Google OAuth 2.0 Redirect URI
+      redirectUri: ~

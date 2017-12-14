@@ -1,3 +1,6 @@
 prototype(CodeQ.GoogleDocs:GoogleDocs) {
 	templatePath = 'resource://CodeQ.GoogleDocs/Private/Fusion/Content/GoogleDocs/GoogleDocs.html'
+	content = CodeQ.GoogleDocs:GoogleDocument{
+		fileId = ${q(node).property('fileId')}
+	}
 }

@@ -5,4 +5,18 @@
     label: Google Docs
     group: general
     icon: icon-file-text
+    inspector:
+      groups:
+        general:
+          label: 'General'
+          icon: 'icon-globe'
   properties:
+    fileId:
+      type: string
+      ui:
+        label: 'Google Docs file ID'
+        reloadIfChanged: true
+        help:
+          message: 'You can find file ID from the URL of the Google Docs. Here is the reference link https://productforums.google.com/forum/#!category-topic/docs/no/3STOEukh1pU'
+        inspector:
+          group: general

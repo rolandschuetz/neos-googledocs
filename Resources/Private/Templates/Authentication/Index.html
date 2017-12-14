@@ -1,0 +1,26 @@
+<f:flashMessages as="flashMessages">
+	<f:if condition="{flashMessages -> f:count()} > 0">
+		<ul id="neos-notifications-inline">
+			<f:for each="{flashMessages}" as="flashMessage">
+				<li data-title="{flashMessage.title}" data-type="{flashMessage.severity -> f:format.case(mode: 'lower')}">{flashMessage}</li>
+			</f:for>
+		</ul>
+	</f:if>
+</f:flashMessages>
+<div class="neos-content neos-container-fluid">
+	<f:if condition="{authUrl}">
+		<f:then>
+			<a href='{authUrl}' class='neos-button neos-button-primary'>{f:translate(id:'button.authenticate', package:'CodeQ.GoogleDocs')}</a>
+		</f:then>
+		<f:else>
+			<div class=''>
+				<p>{f:translate(id:'msg.success', package: 'CodeQ.GoogleDocs')}</p>
+			</div>
+		</f:else>
+	</f:if>
+</div>
+<div class='neos-footer'>
+	<f:if condition="!{authUrl}">
+		<a href='?logout=true' class='neos-button neos-button-danger'>{f:translate(id:'msg.signout', package:'CodeQ.GoogleDocs')}</a>
+	</f:if>
+</div>

@@ -1,0 +1,10 @@
+privilegeTargets:
+  'Neos\Neos\Security\Authorization\Privilege\ModulePrivilege':
+    'CodeQ.Site:GoogleDocsModule':
+      matcher: 'administration/googleDocs'
+roles:
+  'Neos.Neos:Editor':
+    privileges:
+      -
+        privilegeTarget: 'CodeQ.Site:GoogleDocsModule'
+        permission: GRANT

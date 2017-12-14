@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" source-language="en" datatype="plaintext">
+		<body>
+			<trans-unit id="button.authenticate">
+				<source>Authenticate your Google Account</source>
+			</trans-unit>
+			<trans-unit id="msg.success">
+				<source>You are successfully logged in!</source>
+			</trans-unit>
+			<trans-unit id="msg.signout">
+				<source>Sign out from Google</source>
+			</trans-unit>
+			<trans-unit id='msg.missing.settings'>
+				<source>Setting CodeQ.GoogleDocs.authentication.{0} has no value, Please provide settings</source>
+			</trans-unit>
+			<trans-unit id='msg.missing.clientSecret'>
+				<source>Client secret file is missing, please put the file at here {0}.</source>
+			</trans-unit>
+			<trans-unit id='msg.malformed.clientSecret'>
+				<source>Client secret file content is malformed. Please put the correct file.</source>
+			</trans-unit>
+			<trans-unit id='msg.missing.fileId'>
+				<source>File ID is missing</source>
+			</trans-unit>
+			<trans-unit id='msg.error.authentication'>
+				<source>Please authenticate the account</source>
+			</trans-unit>
+			<trans-unit id='msg.error.authenticate.heading'>
+				<source>Authentication required</source>
+			</trans-unit>
+			<trans-unit id='msg.missing.configuration'>
+				<source>Missing Configuration</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

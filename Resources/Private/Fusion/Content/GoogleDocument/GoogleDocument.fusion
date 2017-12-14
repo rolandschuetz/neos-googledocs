@@ -1,0 +1,3 @@
+prototype(CodeQ.GoogleDocs:GoogleDocument) {
+    @class = 'CodeQ\\GoogleDocs\\Fusion\\GoogleDocsFusionObject'
+}

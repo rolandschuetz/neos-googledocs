@@ -22,11 +22,11 @@ CodeQ:
 	GoogleDocs:
 		authentication:
 			# Google OAuth 2.0 client secret file
-			# Place this json file in safe location and provide respective path here.
+			# Place this JSON file in safe location and provide respective path here.
 			# Path should be respective to the DOCUMENT_ROOT\Web folder
 			clientSecretFilePath: ~
 
-			# This file will be generate automatically for storing the access token temperory
+			# This file will be generate automatically for storing the access token temporary
 			# Please provide safe location with file name
 			# Path should be respective to the DOCUMENT_ROOT\Web folder
 			accessTokenFilePath: ~
@@ -42,15 +42,15 @@ CodeQ:
 
 - Go to the [Google API Console](https://console.developers.google.com/).
 - Select a project.
-- In the sidebar on the left, expand APIs & auth and select APIs.
+- In the sidebar on the left, expand APIs & Auth and select APIs.
 - In the displayed list of available APIs, click the link for the Drive API and click Enable API.
 - Within the Drive API page, select the Drive UI Integration tab and begin configuring how your App will integrate with the Drive UI.
 
 
 ### Create Credentials
 
-- Go To [Creditials Section](https://console.developers.google.com/apis/credentials).
-- Clik on `Create Creditials` Button and select `OAuth Client ID` from the dropdown.
+- Go To [Credentials Section](https://console.developers.google.com/apis/credentials).
+- Click on `Create Credentials` Button and select `OAuth Client ID` from the dropdown.
 - Select `Web application` from given options.
 - Add the name of the App (which will be also used in the Settings `appName`).
 - Add `<DOMAIN>/neos/administration/googleDocs` into `Authorized redirect URIs` (replace <DOMAIN> with your actual domain). This URL will also need to be placed into the settings in `redirectUri` option.

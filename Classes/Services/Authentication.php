@@ -69,8 +69,14 @@ class Authentication
 
 	function authenticateClient($code = null){
 		$accessToken = $this->client->authenticate($code);
-		file_put_contents($this->accessTokenFile, json_encode($accessToken));
-		$this->client->setAccessToken($accessToken);
+		if(gettype($accessToken) == 'string'){
+			file_put_contents($this->accessTokenFile, $accessToken);
+			$this->client->setAccessToken($accessToken);
+		}elseif(gettype($accessToken) == 'array'){
+			file_put_contents($this->accessTokenFile, json_encode($accessToken));
+			$this->client->setAccessToken($accessToken);
+		}
+
 		return true;
 	}
 
@@ -86,7 +92,11 @@ class Authentication
 				}
 				if($refreshToken != NULL){
 					$this->client->refreshToken($refreshToken);
-					file_put_contents($this->accessTokenFile, json_encode(array_merge($this->client->getAccessToken(), $accessToken)));
+					if(gettype($this->client->getAccessToken()) == 'string'){
+						file_put_contents($this->accessTokenFile, json_encode(array_merge(json_decode($this->client->getAccessToken(),true), $accessToken)));
+					}elseif(gettype($this->client->getAccessToken()) == 'array'){
+						file_put_contents($this->accessTokenFile, json_encode(array_merge($this->client->getAccessToken(), $accessToken)));
+					}
 				}
 				return $this->client->getAccessToken() != NULL ? true : false;
 			}

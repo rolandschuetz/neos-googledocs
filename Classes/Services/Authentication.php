@@ -69,7 +69,7 @@ class Authentication
 
 	function authenticateClient($code = null){
 		$accessToken = $this->client->authenticate($code);
-		file_put_contents($this->accessTokenFile, $accessToken);
+		file_put_contents($this->accessTokenFile, json_encode($accessToken));
 		$this->client->setAccessToken($accessToken);
 		return true;
 	}
@@ -86,8 +86,7 @@ class Authentication
 				}
 				if($refreshToken != NULL){
 					$this->client->refreshToken($refreshToken);
-
-					file_put_contents($this->accessTokenFile, json_encode(array_merge(json_decode($this->client->getAccessToken(), true), $accessToken)));
+					file_put_contents($this->accessTokenFile, json_encode(array_merge($this->client->getAccessToken(), $accessToken)));
 				}
 				return $this->client->getAccessToken() != NULL ? true : false;
 			}
